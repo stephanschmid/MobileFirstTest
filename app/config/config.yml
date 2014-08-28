@@ -123,3 +123,28 @@ jms_security_extra:
 edge5_app_backend:
     dashboard_template: Edge5BackendBundle::base_dashboard.html.twig
 
+liip_imagine:
+    filter_sets:
+        # Edge5 AppBackendBundle filter sets
+        preview_picture:
+            quality: 90
+            filters:
+                thumbnail: { size: [80, 80], mode: inset }
+        preview_medium:
+            quality: 90
+            filters:
+                thumbnail: { size: [320, 250], mode: outbound }
+        preview_large:
+            quality: 90
+            filters:
+                thumbnail: { size: [640, 500], mode: outbound }
+        edit_picture:
+            quality: 90
+            filters:
+                thumbnail: { size: [360, 270], mode: outbound }
+
+        # Project filter sets
+        opengraph:
+            quality: 90
+            filters:
+                thumbnail: { size: [600, 600], mode: inset }
