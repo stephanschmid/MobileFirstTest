@@ -1,0 +1,4 @@
+services:
+#    edge5_backend.example:
+#        class: Edge5\BackendBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

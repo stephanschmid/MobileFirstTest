@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new Admingenerator\GeneratorBundle\AdmingeneratorGeneratorBundle(),
             new Admingenerator\UserBundle\AdmingeneratorUserBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Propel\PropelBundle\PropelBundle(),
             new Edge5\AppBackendBundle\Edge5AppBackendBundle(),
@@ -27,6 +28,8 @@ class AppKernel extends Kernel
             new JMS\AopBundle\JMSAopBundle(),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new SunCat\MobileDetectBundle\MobileDetectBundle(),
+            new Edge5\FrontendBundle\Edge5FrontendBundle(),
+            new Edge5\BackendBundle\Edge5BackendBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

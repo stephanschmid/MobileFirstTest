@@ -1,0 +1,22 @@
+edge5_backend:
+    resource: "@Edge5BackendBundle/Resources/config/routing.yml"
+    prefix:   /admin
+
+backend_bundle:
+    resource: "@Edge5AppBackendBundle/Resources/config/routing/backend.xml"
+    prefix: /admin
+
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+_liip_imagine:
+    resource: "@LiipImagineBundle/Resources/config/routing.xml"
+
+edge5_frontend:
+    resource: "@Edge5FrontendBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

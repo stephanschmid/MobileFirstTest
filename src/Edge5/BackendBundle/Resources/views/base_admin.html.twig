@@ -1,0 +1,50 @@
+{% extends 'Edge5AppBackendBundle::base_admin_layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+	<style>
+        footer ul li.logo a {
+           background-image: url({{ asset('bundles/edge5backend/img/edge5_logo.png') }});
+           background-size: 80%;
+        }
+	</style>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            // Custom js
+            $('.btn-send-notification').on('click', function(e)
+            {
+                var $that = $(this);
+                $that.hide();
+                $.post($(this).data('sendurl'), function(resp)
+                {
+                    $that.toggle(!resp.success);
+                });
+                e.preventDefault();
+            });
+        });
+    </script>
+{% endblock %}
+
+{% block menu %}
+    {{ knp_menu_render('Edge5BackendBundle:AdminMenu:navbarMenu', { 'allow_safe_labels': true }) }}
+{% endblock %}
+
+{% block navbar_header_logo %}
+    <header>
+        <span class="fa fa-cogs"></span>
+        <span class="fa-class">Admin</span>
+    </header>
+{% endblock %}
+
+{% block copyright %}Mobile First Project Admin Backend © Edge5{% endblock %}
+
+{% block contact %}
+    <a href="mailto:contact@edge5.com">
+        <i class="fa fa-envelope"></i>
+    </a>
+{% endblock %}
