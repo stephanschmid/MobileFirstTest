@@ -1,0 +1,31 @@
+/web/bundles/
+/app/bootstrap.php.cache
+/app/cache/*
+/app/config/parameters.yml
+/app/logs/*
+!app/cache/.gitkeep
+!app/logs/.gitkeep
+/build/
+/vendor/
+/bin/
+/composer.phar
+
+
+/web/media/*
+/web/css/*
+/web/js/*
+/web/assetic/*
+/web/uploads/*
+/web/downloads/*
+
+/web/components
+
+# phpStorm
+.idea/*
+
+# propel
+/app/propel/migrations
+
+
+# system
+.DS_Store
