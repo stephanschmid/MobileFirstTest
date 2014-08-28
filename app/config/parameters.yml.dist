@@ -12,6 +12,14 @@ parameters:
     mailer_password:   ~
 
     locale:            en
+    locales:           [en,de]
+
+    compass_bin: /usr/bin/compass
+    uglify_js_path: /usr/local/bin/uglifyjs
+    uglify_css_path: /usr/local/bin/uglifycss
+
+    edge5.menu_builder.class: Edge5\BackendBundle\Menu\AdminMenu
+
     secret:            ThisTokenIsNotSoSecretChangeIt
 
     debug_toolbar:          true
