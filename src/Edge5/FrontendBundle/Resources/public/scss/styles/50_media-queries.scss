@@ -1,0 +1,76 @@
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+
+   Mobile First:
+   Your small screen styles are in your regular SCSS files and then as the screen
+   gets larger you override what you need to. So, min-width media queries in general.
+
+   min-width: Rules applied for any browser width over the value defined in the query.
+
+   ========================================================================== */
+
+/* SMARTPHONES PORTRAIT */
+@media only screen and (min-width: 300px) {
+
+  body {
+    font-size:10px;
+    background: red;
+  }
+
+}
+
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (min-width: 480px) {
+
+  body {
+    font-size:15px;
+    background: blue;
+  }
+
+}
+
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) {
+
+  body {
+    font-size:20px;
+    background: orange;
+  }
+
+}
+
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 1024px) {
+
+  body {
+    font-size:30px;
+    background: yellow;
+  }
+
+}
+
+/* DESKTOPS AND LAPTOPS */
+@media only screen and (min-width : 1224px) {
+  body {
+    font-size:50px;
+    background: pink;
+  }
+}
+
+/* LARGE SCREENS */
+@media only screen and (min-width: 1824px) {
+
+  body {
+    font-size:100px;
+    background: purple;
+  }
+
+}
+
+/* RETINA */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+
+}
