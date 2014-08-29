@@ -28,25 +28,31 @@ class AdminMenu extends \Edge5\AppBackendBundle\Menu\AdminMenu
 
         if($security->isGranted('IS_AUTHENTICATED_REMEMBERED'))
         {
+            $isAdmin = $security->isGranted('ROLE_ADMIN');
+            $isSuperAdmin = $security->isGranted('ROLE_SUPER_ADMIN');
+
             $level_logout = $this->addLinkRoute($menu, 'Logout', 'fos_user_security_logout')
                 ->setExtra('icon', 'fa fa-power-off')
                 ->setAttribute('class', 'show-mobile')
                 ->setAttribute('id', '#button-exit');
 
-            $level_header = $this->addHeader($menu, $security->getToken()->getUser().' <span class="sub">'.implode(', ', $security->getToken()->getUser()->getRoles()).'</span>', false, 'fa fa-user', 'Edge5_AppBackendBundle_User_edit', array('pk' => 1))
+            $level_header = $this->addHeader($menu, $security->getToken()->getUser().' <span class="sub">'.str_replace('ROLE_', '',implode(', ', $security->getToken()->getUser()->getRoles())).'</span>', false, 'fa fa-user', 'Edge5_AppBackendBundle_User_edit', array('pk' => 1))
                 ->setAttribute('class', 'has-sub');
 
             $level_dashboard = $this->addLinkRoute($menu, 'Dashboard', '_dashboardIndex')
                 ->setExtra('icon', 'fa fa-dashboard');
 
-
             $level_translation = $this->addLinkRoute($menu, 'Translations', 'Edge5_AppBackendBundle_Translation_list')
                 ->setExtra('icon', 'fa fa-language');
 
-            $level_fos = $this->addParentItem($menu, 'Logins', true, 'fa fa-users');
+            if($isSuperAdmin)
+            {
+                $level_fos = $this->addParentItem($menu, 'Logins', true, 'fa fa-users');
 
-            $this->addLinkRoute($level_fos, 'Users', 'Edge5_AppBackendBundle_User_list');
-            $this->addLinkRoute($level_fos, 'Groups', 'Edge5_AppBackendBundle_Group_list');
+                $this->addLinkRoute($level_fos, 'Users', 'Edge5_AppBackendBundle_User_list');
+                $this->addLinkRoute($level_fos, 'Groups', 'Edge5_AppBackendBundle_Group_list');
+            }
+
         }
 
         return $menu;
