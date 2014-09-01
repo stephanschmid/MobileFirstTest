@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<orm-designer version="2.3.5.882" name="App" mvc="Symfony2" orm="Propel" uuid="89d01e6b-ad08-4fe2-a5e2-29052d5f1d95">
+  <module name="MainModule" import-format="PropelXml" import-path="../config/schema.xml" uuid="166afc2b-8dec-4dce-b60f-a06b7f8e5987">
+    <orm-attributes>
+      <attribute name="name">default</attribute>
+      <attribute name="namespace">Edge5\BackendBundle\Model</attribute>
+    </orm-attributes>
+  </module>
+  <visual-data>
+    <module uuid="166afc2b-8dec-4dce-b60f-a06b7f8e5987" bk-color="4294638066" position-x="61" position-y="72" size-x="11" size-x2="821" size-y="46" size-y2="250"/>
+    <project uuid="89d01e6b-ad08-4fe2-a5e2-29052d5f1d95" size-x="0" size-x2="991" size-y="0" size-y2="935"/>
+  </visual-data>
+</orm-designer>
