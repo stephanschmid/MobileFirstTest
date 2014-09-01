@@ -1,5 +1,23 @@
 {% extends "Edge5FrontendBundle::layout.html.twig" %}
 
 {% block content %}
-Hello {{ name }}!
+<p>
+    Hello {{ name }}!
+</p>
+
+<h3>Responsive utilities test case</h3>
+<p>Resize your browser or load on different devices to test the classes.</p>
+<h4>Visible on...</h4>
+<ul class="responsive-utilities-test">
+    <li class="visible-phone">Phone</li>
+    <li class="visible-tablet">Tablet</li>
+    <li class="visible-desktop">Desktop</li>
+</ul>
+<h4>Hidden on...</h4>
+<ul class="responsive-utilities-test hidden-on">
+    <li class="hidden-phone">Phone</li>
+    <li class="hidden-tablet">Tablet</li>
+    <li class="hidden-desktop">Desktop</li>
+</ul>
+
 {% endblock %}
