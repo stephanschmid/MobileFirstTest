@@ -11,10 +11,12 @@ use Symfony\Component\HttpFoundation\Request;
 class DefaultController extends Controller
 {
     private $request;
+    //private $locale;
 
     public function preExecute(Request $request)
     {
         $this->request = $request;
+        //$this->locale = $request->getPreferredLanguage($this->container->getParameter('locales'));
     }
 
     /**
@@ -27,7 +29,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/hello/{name}")
+     * @Route("{_locale}/hello/{name}", name="_hello_lang")
      * @Template()
      */
     public function helloAction($name)

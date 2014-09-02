@@ -3,7 +3,7 @@ Edge5MobileFirstBase Project Framework
 
 This repository serves as a skeleton for Symfony2 / Propel based Mobile First web apps.
 
-It contains an empty FrontendBundle and a customizable BackendBundle based on the Edge5AppBackendBundle
+It contains an empty FrontendBundle and a customizable BackendBundle based on the [`Edge5AppBackendBundle`](https://github.com/Edge5/Edge5MobileFirstBaseProject)
 
 ### Installation
 
@@ -18,19 +18,19 @@ It contains an empty FrontendBundle and a customizable BackendBundle based on th
 
     $ composer install
 
-3. Run assets install and cache warmup commands
--------
-
-    $ php app/console assets:install --symlink
-    $ php app/console cache:warmup
-    
-4. Create and install database
+3. Create and install database
 -------
 
     $ php app/console propel:build
     $ php app/console propel:database:create
     $ php app/console propel:sql:insert --force
-    
+
+4. Run assets install and cache warmup commands
+-------
+
+    $ php app/console assets:install --symlink
+    $ php app/console cache:warmup
+
 5. Create FOS superAdmin user
 -------
 

@@ -1,0 +1,12 @@
+{% extends "Edge5FrontendBundle::layout.html.twig" %}
+
+{% block content %}
+
+    <h1>{{ 'page_error_title'|trans }}</h1>
+
+	{# Line Image #}
+	<div id="headerLine"></div>
+
+    <p>{{ 'page_error_content'|trans|raw|nl2br }}</p>
+
+{% endblock %}
