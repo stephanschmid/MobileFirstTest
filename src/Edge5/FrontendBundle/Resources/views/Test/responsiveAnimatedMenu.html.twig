@@ -1,16 +1,26 @@
 {% extends "Edge5FrontendBundle::layout.html.twig" %}
 
 {% block content %}
-	<ul>
+	<ul class="menu">
 	{%  for item in data %}
 		<li>
-			{{ item.title }}
-
-			<li>
-				{{ item.subTitle }}
-			</li>
+			<a href="{{ item.url }}">
+				<span>
+					<i class="fa {{ item.icon }}"></i>
+				</span>
+				<div class="menu-text">
+					<h2>{{ item.title }}</h2>
+					<h3>{{ item.subTitle }}</h3>
+				</div>
+			</a>
 		</li>
-
 	{% endfor %}
 	</ul>
 {% endblock %}
+
+
+
+
+
+
+

@@ -19,7 +19,7 @@ require(['jquery', 'dummies/dummy'], function($, dummy){
 
 		var val = dummy.sayHello();
 
-		alert(val);
+		//alert(val);
 
     });
 

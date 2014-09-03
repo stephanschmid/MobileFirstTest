@@ -4,7 +4,7 @@ define(["jquery", "dummies/dummy2"], function($, dummy2) {
 
 			if($('h3').length)
 			{
-				$('h3').html(dummy2.saySomething('hello world'));
+				//$('h3').html(dummy2.saySomething('hello world'));
 
 				return dummy2.saySomething('hello world');
 			}

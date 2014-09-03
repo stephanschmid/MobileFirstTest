@@ -10,6 +10,7 @@
  * ==|== normalize ==========================================================
  */
 
+@import "colors.scss";
 @import "constants.scss";
 @import "mixins.scss";
 
@@ -20,6 +21,9 @@
 	 ========================================================================== */
 
 @import "styles/01_basics";
+@import "styles/02_menu";
+@import "styles/20_icons";
+@import "styles/21_fonts";
 @import "styles/50_media-queries";
 
 @import "helpers.scss";

@@ -5,6 +5,11 @@ This repository serves as a skeleton for Symfony2 / Propel based Mobile First we
 
 It contains an empty FrontendBundle and a customizable BackendBundle based on the [`Edge5AppBackendBundle`](https://github.com/Edge5/Edge5MobileFirstBaseProject)
 
+### Idee
+
+asdasd
+
+
 ### Installation
 
 1. Clone Edge5MobileFirstBaseProject repository

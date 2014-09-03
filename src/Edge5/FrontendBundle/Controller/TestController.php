@@ -36,29 +36,36 @@ class TestController extends Controller
 	{
 		$data = array(
 			array(
-				'title' => 'bla',
-				'subTitle' => 'spimdso',
-				'icon' => 'fa-share',
-				'url' => 'http://test'
+				'title' => 'Exceptional Service',
+				'subTitle' => 'Personalized to your needs',
+				'icon' => 'fa-paperclip',
+				'url' => 'http://service'
 			),
 			array(
-				'title' => 'bla2',
-				'subTitle' => 'spimdso',
-				'icon' => 'fa-share',
-				'url' => 'http://test'
+				'title' => 'Creative Storytelling',
+				'subTitle' => 'Advanced use of technology',
+				'icon' => 'fa-home',
+				'url' => 'http://story'
 			),
 			array(
-				'title' => 'bla',
-				'subTitle' => 'spimdso',
-				'icon' => 'fa-share',
-				'url' => 'http://test'
+				'title' => 'infographical Education',
+				'subTitle' => 'Understanding visually',
+				'icon' => 'fa-cloud',
+				'url' => 'http://visual'
 			),
 
 			array(
-				'title' => 'bla',
-				'subTitle' => 'spimdso',
-				'icon' => 'fa-share',
-				'url' => 'http://test'
+				'title' => 'Sophisticated Team',
+				'subTitle' => 'Professionals in action',
+				'icon' => 'fa-wheelchair',
+				'url' => 'http://team'
+			),
+
+			array(
+				'title' => 'Unconditional Support',
+				'subTitle' => '24/7 for your needs',
+				'icon' => 'fa-futbol-o',
+				'url' => 'http://support'
 			),
 		);
 
