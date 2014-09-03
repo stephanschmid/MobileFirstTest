@@ -23,15 +23,13 @@ ul.menu {
 
 			span {
 				position: absolute;
-				//left: 9%;
-				//top: 30%;
 				left: 30px;
 				top: 23px;
 
 				i {
 					font-size: $icon-font-size;
 					color: $li-icon-color;
-					@include transition(font-size, 300ms, ease-in-out);
+					@include transition(font-size, 300ms, linear);
 				}
 			}
 
@@ -49,7 +47,7 @@ ul.menu {
 				}
 
 				h2, h3 {
-					@include transition(font-size, 300ms, ease-in-out);
+					@include transition(font-size, 300ms, linear);
 				}
 			}
 		}
@@ -68,14 +66,14 @@ ul.menu {
 
 				div.menu-text {
 					h2 {
-						font-size: $font-size * 1.1;
-						line-height: $font-size * 1.1;
+						font-size: $font-size * 1;
+						line-height: $font-size * 1;
 						color: $li-h2-color-hover;
 					}
 
 					h3 {
-						font-size: $font-size * 1.5;
-						line-height: $font-size * 1.6;
+						font-size: $font-size * 1.3;
+						line-height: $font-size * 1.4;
 						color: $li-h3-color-hover;
 					}
 				}

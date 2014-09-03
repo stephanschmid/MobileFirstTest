@@ -7,7 +7,7 @@ It contains an empty FrontendBundle and a customizable BackendBundle based on th
 
 ### Idee
 
-asdasd
+Mobile first menu transition for fancy menus
 
 
 ### Installation
