@@ -1,0 +1,16 @@
+{% extends "Edge5FrontendBundle::layout.html.twig" %}
+
+{% block content %}
+	<ul>
+	{%  for item in data %}
+		<li>
+			{{ item.title }}
+
+			<li>
+				{{ item.subTitle }}
+			</li>
+		</li>
+
+	{% endfor %}
+	</ul>
+{% endblock %}

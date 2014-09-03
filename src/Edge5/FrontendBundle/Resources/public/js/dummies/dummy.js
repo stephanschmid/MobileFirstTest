@@ -2,9 +2,16 @@ define(["jquery", "dummies/dummy2"], function($, dummy2) {
     return {
         sayHello: function() {
 
-            console.log( dummy2.saySomething('hello world') );
+			if($('h3').length)
+			{
+				$('h3').html(dummy2.saySomething('hello world'));
 
-            return true;
+				return dummy2.saySomething('hello world');
+			}
+			else
+			{
+				return false;
+			}
         }
     }
 });

@@ -14,11 +14,13 @@ requirejs.config({
 
 require(['jquery', 'dummies/dummy'], function($, dummy){
 
-    /*
-    $(function() {
-        console.log($('body'));
-    });
-    */
 
-    dummy.sayHello();
+    $(function() {
+
+		var val = dummy.sayHello();
+
+		alert(val);
+
+    });
+
 });

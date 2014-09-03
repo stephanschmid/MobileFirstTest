@@ -36,4 +36,6 @@ class DefaultController extends Controller
     {
         return $this->render('Edge5FrontendBundle:Default:index.html.twig', array('name' => $name));
     }
+
+
 }
