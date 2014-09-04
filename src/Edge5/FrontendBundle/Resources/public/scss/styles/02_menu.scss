@@ -5,8 +5,8 @@ ul.menu {
 
 	li {
 		width: 100%;
-		max-width: $li-width-desktop;
-		height: $li-height;
+		max-width: $li-width-mobile;
+		height: $li-height-mobile;
 		float: left;
 		position: relative;
 		margin-bottom: $li-margin;
@@ -26,7 +26,7 @@ ul.menu {
 				//left: 30px;
 				//top: 23px;
 				width: 60px;
-				line-height: 90px;
+				line-height: $li-height-mobile;
 				top: 0px;
 				left: 0px;
 				text-align: center;
@@ -35,7 +35,7 @@ ul.menu {
 					font-size: $icon-font-size;
 					color: $li-icon-color;
 					@include transition(font-size, 300ms, linear);
-					line-height: 90px;
+					line-height: $li-height-mobile;
 				}
 			}
 
@@ -107,7 +107,7 @@ ul.menu {
 		li {
 			a {
 				padding: $li-padding 0 $li-padding $li-padding * 5;
-				
+
 				span {
 					width: 90px;
 
@@ -214,8 +214,25 @@ ul.menu {
 @media only screen and (min-width: 1024px) {
 
 	body {
-		max-width: 1024px;
-		margin: 0 auto;
+		//max-width: 1024px;
+		//margin: 0 auto;
+	}
+
+	ul.menu {
+		li {
+			max-width: $li-width-desktop;
+			height: $li-height-desktop;
+
+			a {
+				span {
+					line-height: $li-height-desktop;
+
+					i {
+						line-height: $li-height-desktop;
+					}
+				}
+			}
+		}
 	}
 
 }
