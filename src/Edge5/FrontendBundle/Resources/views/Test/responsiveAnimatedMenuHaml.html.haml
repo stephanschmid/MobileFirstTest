@@ -1,4 +1,13 @@
 - extends "Edge5FrontendBundle::layout.html.twig"
 
 - block content
-  asdasd
+  %ul.menu
+    -for item in data
+      %li
+        %a(href="#{ item.url }")
+          %span
+            %i.fa(class="#{ item.icon }")
+          .menu-text
+            %h2
+              = item.title
+            %h3 #{ item.subTitle }
