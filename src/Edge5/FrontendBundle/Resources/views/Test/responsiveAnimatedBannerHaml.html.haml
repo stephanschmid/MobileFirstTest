@@ -1,0 +1,18 @@
+- extends "Edge5FrontendBundle::layout.html.twig"
+
+- block content
+
+    %section.wrapper
+        .div#ad-1
+            #content
+                %h2 Lost at the sea?
+                %h3 Relax - we've got your rudder.
+                %form
+                    %input{:type=>"text", :required => true, :value => "Email address..."}
+                    %input{:type=>"submit", :value => "Guide me"}
+            #clouds
+                %ul#cloud-group-1
+                    %li.cloud-1
+                    %li.cloud-2
+                    %li.cloud-3
+                %ul#cloud-group-1

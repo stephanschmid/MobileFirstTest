@@ -72,13 +72,22 @@ class TestController extends Controller
 		return array('data' => $data);
 	}
 
-	/**
-	 * @Route("/responsiveAnimatedMenuHaml", name="_responsiveAnimatedMenuHaml")
-	 * @Template(engine="haml")
-	 */
-	public function responsiveAnimatedMenuHamlAction()
-	{
-		return $this->responsiveAnimatedMenuAction();
-	}
+    /**
+     * @Route("/responsiveAnimatedMenuHaml", name="_responsiveAnimatedMenuHaml")
+     * @Template(engine="haml")
+     */
+    public function responsiveAnimatedMenuHamlAction()
+    {
+        return $this->responsiveAnimatedMenuAction();
+    }
+
+    /**
+     * @Route("/responsiveAnimatedBannerHaml", name="_responsiveAnimatedBannerHaml")
+     * @Template(engine="haml")
+     */
+    public function responsiveAnimatedBannerHamlAction()
+    {
+        return $this->responsiveAnimatedBannerAction();
+    }
 	
 }

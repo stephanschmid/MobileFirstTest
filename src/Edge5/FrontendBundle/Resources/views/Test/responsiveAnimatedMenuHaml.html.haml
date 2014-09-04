@@ -1,8 +1,9 @@
 - extends "Edge5FrontendBundle::layout.html.twig"
 
 - block content
+
   %ul.menu
-    -for item in data
+    - for item in data
       %li
         %a(href="#{ item.url }")
           %span
