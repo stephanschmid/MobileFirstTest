@@ -1,0 +1,64 @@
+section#wrapper {
+	#ad-1 {
+
+		#content {
+			h2 {
+
+			}
+
+			h3 {
+
+			}
+
+			form {
+				input[type="text"] {
+
+				}
+				input[type="submit"] {
+
+				}
+			}
+		}
+
+		#clouds {
+			ul#cloud-group-1 {
+
+			}
+
+			ul#cloud-group-2 {
+
+			}
+
+			ul#cloud-group-1,
+			ul#cloud-group-2 {
+
+				li {
+					&.cloud-1,
+					&.cloud-2,
+					&.cloud-3 {
+
+					}
+				}
+			}
+		}
+
+		ul#boat {
+			li {
+				#question-mark {
+
+				}
+			}
+		}
+
+		ul#water {
+			li {
+				&#water-back {
+
+				}
+				&#water-front {
+
+				}
+			}
+		}
+	}
+}
