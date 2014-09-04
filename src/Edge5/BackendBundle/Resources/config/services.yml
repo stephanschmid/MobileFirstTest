@@ -1,4 +1,11 @@
 services:
-#    edge5_backend.example:
-#        class: Edge5\BackendBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
+    edge5.twig.extension.admingenerator.extends_my_configured_layout:
+      class: "Edge5\BackendBundle\Admingenerator\UserBundle\Twig\Extension\MyConfiguredLayoutExtension"
+      arguments: ["@twig.loader"]
+      calls:
+        - [setContainer, ["@service_container"]]
+      tags:
+        - { name: twig.extension }
+
+    twig.extension.admingenerator.extends_my_configured_layout:
+      alias: edge5.twig.extension.admingenerator.extends_my_configured_layout
