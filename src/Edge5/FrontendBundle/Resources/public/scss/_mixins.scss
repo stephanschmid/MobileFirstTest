@@ -42,7 +42,6 @@
 }
 
 // Background Image
-
 @mixin background-image ($image-property) {
 	-webkit-background-size: $image-property;
 	-moz-background-size: $image-property;
@@ -50,6 +49,24 @@
 	background-size: $image-property;
 }
 
+// Keyframes
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+	@-ms-keyframes #{$name} {
+		@content;
+	}
+	@-o-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}
 
 
 

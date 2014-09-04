@@ -179,12 +179,16 @@ section.wrapper {
 
 		ul#water {
 			li {
+				&#water-back,
+				&#water-front {
+					position: absolute;
+					background-repeat: repeat-x;
+				}
+
 				&#water-back {
 					width: 1200px;
 					height: 84px;
-					background-repeat: repeat-x;
 					z-index: 1;
-					position: absolute;
 					bottom: 10px;
 					left: -20px;
 					background-image: url($base-path + 'images/water-back.png');
@@ -194,9 +198,7 @@ section.wrapper {
 				&#water-front {
 					width: 1200px;
 					height: 158px;
-					background-repeat: repeat-x;
 					z-index: 3;
-					position: absolute;
 					bottom: -70px;
 					left: -30px;
 					background-image: url($base-path + 'images/water-front.png');
@@ -206,12 +208,6 @@ section.wrapper {
 		}
 	}
 }
-
-
-
-
-
-
 
 
 
@@ -264,31 +260,6 @@ section.wrapper {
 			}
 		}
 	}
-
-}
-
-/* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 1024px) {
-
-
-}
-
-/* DESKTOPS AND LAPTOPS */
-@media only screen and (min-width : 1224px) {
-
-
-}
-
-/* LARGE SCREENS */
-@media only screen and (min-width: 1824px) {
-
-
-}
-
-/* RETINA */
-@media only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-
 
 }
 
