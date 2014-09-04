@@ -19,17 +19,23 @@ ul.menu {
 			width: 100%;
 			height: 100%;
 			display: block;
-			padding: $li-padding 0 $li-padding $li-padding * 5;
+			padding: $li-padding 0 $li-padding $li-padding * 3;
 
 			span {
 				position: absolute;
-				left: 30px;
-				top: 23px;
+				//left: 30px;
+				//top: 23px;
+				width: 60px;
+				line-height: 90px;
+				top: 0px;
+				left: 0px;
+				text-align: center;
 
 				i {
 					font-size: $icon-font-size;
 					color: $li-icon-color;
 					@include transition(font-size, 300ms, linear);
+					line-height: 90px;
 				}
 			}
 
@@ -100,7 +106,11 @@ ul.menu {
 	ul.menu {
 		li {
 			a {
+				padding: $li-padding 0 $li-padding $li-padding * 5;
+				
 				span {
+					width: 90px;
+
 					i {
 						font-size: $icon-font-size * 1.3;
 					}
