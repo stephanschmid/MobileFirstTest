@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500);
 
 // BASE PATH
-$base-path: "/bundles/edge5frontend";
+$base-path: "../../../bundles/edge5frontend/";
 
 // FONTS
 $font-size: 14px;
@@ -21,11 +21,32 @@ $li-height-desktop: 120px;
 $li-border-width: 10px;
 
 $li-padding: 20px;
-
 $li-padding-desktop: 25px;
-
 $li-margin: 5px;
+
+$li-h2-padding: 10px;
 
 $icon-font-size: $font-size * 1.5;
 
-$li-h2-padding: 10px;
+
+// BANNER
+
+$banner-wrapper-margin: 10px;
+
+$banner-width: 720px;
+$banner-height: 520px;
+$banner-height-desktop: 300px;
+
+$banner-content-width: 325px;
+$banner-content-margin: 20px;
+$banner-content-h2-size: 45px;
+$banner-h2-margin: 10px;
+$banner-content-h3-size: 24px;
+
+$banner-form-margin: 30px;
+//$banner-input-height: 48px;
+$banner-input-padding: 14px;
+$banner-input-height: 48px;
+$banner-input-font-size: 14px;
+$banner-input-border-radius: 5px;
+$banner-input-text-margin: 10px;

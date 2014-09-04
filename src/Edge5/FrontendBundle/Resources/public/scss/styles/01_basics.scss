@@ -118,6 +118,14 @@ h2, h3 {
 	margin: 0;
 }
 
+:focus {
+	outline: 0; /* Remove focus outline */
+}
+
+ul, ol {
+	list-style-type: none;
+}
+
 
 
 

@@ -1,51 +1,178 @@
-section#wrapper {
+section.wrapper {
+	margin: $banner-wrapper-margin;
+
 	#ad-1 {
+		max-width: $banner-width;
+		height: $banner-height;
+		margin: 0 auto;
+		background-image: url($base-path + 'images/background.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		@include background-image(cover);
+		overflow: hidden;
+		position: relative;
+		@include box-shadow(1px 1px 4px rgba(0,0,0,0.4));
 
 		#content {
-			h2 {
+			width: 100%;
+			max-width: 100%;
+			float: right;
+			padding: $banner-content-margin;
+			text-align: left;
+			z-index: 4;
+			position: relative;
+			overflow: visible;
 
+			h2 {
+				font-size: $banner-content-h2-size * 0.8;
+				line-height: $banner-content-h2-size * 0.8;
+				font-weight: 500;
+				margin-bottom: $banner-h2-margin;
+				color: $banner-h2-color;
+				@include animation(h2-animation, 7s, 1, ease-in-out);
 			}
 
 			h3 {
-
+				font-size: $banner-content-h3-size * 0.8;
+				line-height: $banner-content-h3-size * 0.8;
+				font-weight: 400;
+				color: $banner-h3-color;
+				@include animation(h3-animation, 10s, 1, ease-in-out);
 			}
 
 			form {
-				input[type="text"] {
+				width: 100%;
+				margin: $banner-form-margin 0 0 0;
+				position: relative;
+				@include animation(form-animation, 12s, 1, ease-in-out);
 
-				}
+				input[type="text"],
 				input[type="submit"] {
+					font-size: $banner-input-font-size;
+					font-weight: 400;
+					width: 100%;
+					height: $banner-input-height;
+					float: left;
+					padding: 0 $banner-input-padding;
+					@include border-radius(5px);
+				}
 
+				input[type="text"] {
+					color: $banner-input-text-color;
+					border: 1px solid $banner-input-text-border-color;
+					margin-bottom: $banner-input-text-margin;
+					background-image: linear-gradient(bottom, rgb(216,201,185) 0%, rgb(199,178,155) 100%);
+					background-image: -o-linear-gradient(bottom, rgb(216,201,185) 0%, rgb(199,178,155) 100%);
+					background-image: -moz-linear-gradient(bottom, rgb(216,201,185) 0%, rgb(199,178,155) 100%);
+					background-image: -webkit-linear-gradient(bottom, rgb(216,201,185) 0%, rgb(199,178,155) 100%);
+					background-image: -ms-linear-gradient(bottom, rgb(216,201,185) 0%, rgb(199,178,155) 100%);
+
+					&:focus {
+						background-image: linear-gradient(bottom, rgb(199,178,155) 0%, rgb(199,178,155) 100%);
+						background-image: -o-linear-gradient(bottom, rgb(199,178,155) 0%, rgb(199,178,155) 100%);
+						background-image: -moz-linear-gradient(bottom, rgb(199,178,155) 0%, rgb(199,178,155) 100%);
+						background-image: -webkit-linear-gradient(bottom, rgb(199,178,155) 0%, rgb(199,178,155) 100%);
+						background-image: -ms-linear-gradient(bottom, rgb(199,178,155) 0%, rgb(199,178,155) 100%);
+					}
+				}
+
+				input[type="submit"] {
+					color: $banner-input-submit-color;
+					border: 1px solid $banner-input-submit-border-color;
+					background-color: $banner-input-submit-bg-color;
+					@include transition(color, 300ms, linear);
+					@include transition(background-color, 300ms, linear);
+
+					&:hover {
+						color: $banner-input-submit-bg-color;
+						background-color: $banner-input-submit-color;
+					}
 				}
 			}
 		}
 
 		#clouds {
-			ul#cloud-group-1 {
+			position: absolute;
+			top: 0px;
+			z-index: 0;
 
+			ul#cloud-group-1 {
+				left: 0;
+				@include animation(cloud-group-1-animation, 30s, infinite, linear);
 			}
 
 			ul#cloud-group-2 {
-
+				left: 100%;
+				@include animation(cloud-group-2-animation, 30s, infinite, linear);
 			}
 
 			ul#cloud-group-1,
 			ul#cloud-group-2 {
+				max-width: 100%;
+				position: absolute;
 
 				li {
 					&.cloud-1,
 					&.cloud-2,
 					&.cloud-3 {
+						position: absolute;
+					}
 
+					&.cloud-1 {
+						width: 172px;
+						height: 121px;
+						top: 10px;
+						left: 40px;
+						background-image: url($base-path + 'images/cloud-1.png');
+					}
+
+					&.cloud-2 {
+						width: 121px;
+						height: 75px;
+						top: -25px;
+						left: 300px;
+						background-image: url($base-path + 'images/cloud-2.png');
+					}
+
+					&.cloud-3 {
+						width: 132px;
+						height: 105px;
+						top: -5px;
+						left: 530px;
+						background-image: url($base-path + 'images/cloud-3.png');
 					}
 				}
 			}
 		}
 
 		ul#boat {
-			li {
-				#question-mark {
+			width: 249px;
+			height: 215px;
+			z-index: 2;
+			position: absolute;
+			bottom: 25px;
+			left: 20px;
+			overflow: visible;
+			@include animation(boat-in-animation, 3s, 1, ease-out);
 
+			li {
+				width: 249px;
+				height: 215px;
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				overflow: visible;
+				background-image: url($base-path + 'images/boat.png');
+				@include animation(boat-animation, 2s, infinite, ease-in-out);
+
+				#question-mark {
+					width: 24px;
+					height: 50px;
+					position: absolute;
+					right: 34px;
+					top: -30px;
+					background-image: url($base-path + 'images/question-mark.png');
+					@include animation(question-mark-animation, 4s, 1, ease-in-out);
 				}
 			}
 		}
@@ -53,12 +180,116 @@ section#wrapper {
 		ul#water {
 			li {
 				&#water-back {
-
+					width: 1200px;
+					height: 84px;
+					background-repeat: repeat-x;
+					z-index: 1;
+					position: absolute;
+					bottom: 10px;
+					left: -20px;
+					background-image: url($base-path + 'images/water-back.png');
+					@include animation(water-back-animation, 3s, infinite, ease-in-out);
 				}
-				&#water-front {
 
+				&#water-front {
+					width: 1200px;
+					height: 158px;
+					background-repeat: repeat-x;
+					z-index: 3;
+					position: absolute;
+					bottom: -70px;
+					left: -30px;
+					background-image: url($base-path + 'images/water-front.png');
+					@include animation(water-front-animation, 2s, infinite, ease-in-out);
 				}
 			}
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) {
+
+	section.wrapper {
+		#ad-1 {
+			height: $banner-height-desktop;
+
+			#content {
+				max-width: $banner-content-width;
+				margin: $banner-content-margin * 2;
+				padding: 0;
+
+				h2 {
+					font-size: $banner-content-h2-size;
+					line-height: $banner-content-h2-size;
+				}
+
+				h3 {
+					font-size: $banner-content-h3-size;
+					line-height: $banner-content-h3-size;
+				}
+				form {
+					input[type="text"],
+					input[type="submit"] {
+						height: $banner-input-height;
+						padding: 0 $banner-input-padding;
+						@include border-radius(0);
+					}
+
+					input[type="text"] {
+						width: 71%;
+						margin-bottom: 0;
+						border-top-left-radius: $banner-input-border-radius;
+						border-bottom-left-radius: $banner-input-border-radius;
+					}
+
+					input[type="submit"] {
+						width: auto;
+						border-left: none;
+						border-top-right-radius: $banner-input-border-radius;
+						border-bottom-right-radius: $banner-input-border-radius;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 1024px) {
+
+
+}
+
+/* DESKTOPS AND LAPTOPS */
+@media only screen and (min-width : 1224px) {
+
+
+}
+
+/* LARGE SCREENS */
+@media only screen and (min-width: 1824px) {
+
+
+}
+
+/* RETINA */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+
+
+}
+
+

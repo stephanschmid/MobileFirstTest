@@ -1,5 +1,4 @@
 // Box - sizing
-
 @mixin box-sizing( $type: border-box ) {
 	-webkit-box-sizing: $type;
 	-moz-box-sizing: $type;
@@ -9,7 +8,6 @@
 }
 
 // Box - shadow
-
 @mixin box-shadow($shadow) {
 	-webkit-box-shadow: $shadow;
 	-moz-box-shadow: $shadow;
@@ -18,7 +16,6 @@
 }
 
 // Transition
-
 @mixin transition($transition-property, $transition-time, $method) {
 	-webkit-transition: $transition-property $transition-time $method;
 	-moz-transition: $transition-property $transition-time $method;
@@ -26,3 +23,36 @@
 	-o-transition: $transition-property $transition-time $method;
 	transition: $transition-property $transition-time $method;
 }
+
+// Animation
+@mixin animation($animation-property, $animation-time, $count, $method) {
+	-webkit-animation: $animation-property $animation-time $count $method;
+	-moz-animation: $animation-property $animation-time $count $method;
+	-ms-animation: $animation-property $animation-time $count $method;
+	-o-animation: $animation-property $animation-time $count $method;
+	animation: $animation-property $animation-time $count $method;
+}
+
+// BorderRadius
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+// Background Image
+
+@mixin background-image ($image-property) {
+	-webkit-background-size: $image-property;
+	-moz-background-size: $image-property;
+	-o-background-size: $image-property;
+	background-size: $image-property;
+}
+
+
+
+
+
+
+
