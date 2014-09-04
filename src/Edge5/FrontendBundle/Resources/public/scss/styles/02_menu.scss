@@ -23,8 +23,6 @@ ul.menu {
 
 			span {
 				position: absolute;
-				//left: 30px;
-				//top: 23px;
 				width: 60px;
 				line-height: $li-height-mobile;
 				top: 0px;
@@ -33,9 +31,9 @@ ul.menu {
 
 				i {
 					font-size: $icon-font-size;
+					line-height: $li-height-mobile;
 					color: $li-icon-color;
 					@include transition(font-size, 300ms, linear);
-					line-height: $li-height-mobile;
 				}
 			}
 
@@ -213,10 +211,17 @@ ul.menu {
 /* TABLET LANDSCAPE / DESKTOP */
 @media only screen and (min-width: 1024px) {
 
-	body {
-		//max-width: 1024px;
-		//margin: 0 auto;
-	}
+
+}
+
+/* DESKTOPS AND LAPTOPS */
+@media only screen and (min-width : 1224px) {
+
+
+}
+
+/* LARGE SCREENS */
+@media only screen and (min-width: 1824px) {
 
 	ul.menu {
 		li {
@@ -234,18 +239,6 @@ ul.menu {
 			}
 		}
 	}
-
-}
-
-/* DESKTOPS AND LAPTOPS */
-@media only screen and (min-width : 1224px) {
-
-
-}
-
-/* LARGE SCREENS */
-@media only screen and (min-width: 1824px) {
-
 
 }
 

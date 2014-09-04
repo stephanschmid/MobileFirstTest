@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "14c340db0ef7f6ecf346d081079fbce6",
+    "hash": "ca297e26ec8c7ed476a6fa0cb69ef619",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -1895,6 +1895,121 @@
             "time": "2014-07-31 22:12:22"
         },
         {
+            "name": "mthaml/mthaml",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/arnaud-lb/MtHaml.git",
+                "reference": "540d026afe2575fc69fb5780b6f0ea3b9b96cad0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/arnaud-lb/MtHaml/zipball/540d026afe2575fc69fb5780b6f0ea3b9b96cad0",
+                "reference": "540d026afe2575fc69fb5780b6f0ea3b9b96cad0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "conflict": {
+                "mthaml/mthaml-bundle": "<1.1.0"
+            },
+            "require-dev": {
+                "coffeescript/coffeescript": "~1",
+                "leafo/lessphp": "*",
+                "leafo/scssphp": "*",
+                "michelf/php-markdown": "~1.3",
+                "twig/twig": "~1.11"
+            },
+            "suggest": {
+                "coffeescript/coffeescript": "If you want to use :coffee or :coffeescript filter",
+                "leafo/lessphp": "If you want to use :less filter",
+                "leafo/scssphp": "If you want to use :scss filter",
+                "michelf/php-markdown": "If you want to use :markdown filter",
+                "twig/twig": "If you want to use Twig templating engine"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "MtHaml\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arnaud Le Blanc",
+                    "email": "arnaud.lb@gmail.com"
+                }
+            ],
+            "description": "HAML for PHP",
+            "homepage": "https://github.com/arnaud-lb/MtHaml",
+            "keywords": [
+                "HAML"
+            ],
+            "time": "2014-08-17 13:51:45"
+        },
+        {
+            "name": "mthaml/mthaml-bundle",
+            "version": "dev-master",
+            "target-dir": "MtHamlBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/arnaud-lb/MtHamlBundle.git",
+                "reference": "091f1c04248163bc665f3f139cb799c6f735a550"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/arnaud-lb/MtHamlBundle/zipball/091f1c04248163bc665f3f139cb799c6f735a550",
+                "reference": "091f1c04248163bc665f3f139cb799c6f735a550",
+                "shasum": ""
+            },
+            "require": {
+                "mthaml/mthaml": ">=1.3.0",
+                "php": ">=5.3.3",
+                "symfony/framework-bundle": "~2.1",
+                "symfony/twig-bundle": "~2.1"
+            },
+            "require-dev": {
+                "jms/translation-bundle": "~1",
+                "sensio/framework-extra-bundle": "~2.1",
+                "symfony/assetic-bundle": "~2.1",
+                "symfony/browser-kit": "~2.1",
+                "symfony/console": "~2.1",
+                "symfony/css-selector": "~2.1",
+                "symfony/yaml": "~2.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "MtHamlBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arnaud Le Blanc",
+                    "email": "arnaud.lb@gmail.com"
+                }
+            ],
+            "description": "This Bundle provides a HAML templating engine",
+            "homepage": "https://github.com/arnaud-lb/MtHamlBundle",
+            "keywords": [
+                "HAML"
+            ],
+            "time": "2014-06-25 19:40:55"
+        },
+        {
             "name": "pagerfanta/pagerfanta",
             "version": "dev-master",
             "source": {
@@ -3178,7 +3293,8 @@
         "liip/imagine-bundle": 20,
         "suncat/mobile-detect-bundle": 20,
         "avocode/form-extensions-bundle": 20,
-        "edge5/app-backend-bundle": 20
+        "edge5/app-backend-bundle": 20,
+        "mthaml/mthaml-bundle": 20
     },
     "prefer-stable": false,
     "platform": {

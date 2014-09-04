@@ -21,7 +21,8 @@
         "liip/imagine-bundle": "dev-master",
         "suncat/mobile-detect-bundle": "dev-master",
         "avocode/form-extensions-bundle": "dev-master",
-        "edge5/app-backend-bundle": "dev-master"
+        "edge5/app-backend-bundle": "dev-master",
+        "mthaml/mthaml-bundle": "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

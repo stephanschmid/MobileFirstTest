@@ -30,6 +30,7 @@ class AppKernel extends Kernel
             new SunCat\MobileDetectBundle\MobileDetectBundle(),
             new Edge5\FrontendBundle\Edge5FrontendBundle(),
             new Edge5\BackendBundle\Edge5BackendBundle(),
+			new MtHamlBundle\MtHamlBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
