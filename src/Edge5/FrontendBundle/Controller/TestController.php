@@ -89,5 +89,14 @@ class TestController extends Controller
     {
         return $this->responsiveAnimatedBannerAction();
     }
+
+    /**
+     * @Route("/edge5BannerHaml", name="_edge5BannerHaml")
+     * @Template(engine="haml")
+     */
+    public function edge5BannerHamlAction()
+    {
+        return $this->responsiveAnimatedBannerAction();
+    }
 	
 }

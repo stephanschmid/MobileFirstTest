@@ -1,0 +1,60 @@
+#e5-container {
+	height: 100%;
+	min-height: 100%;
+	margin: $e5-banner-wrapper-margin;
+	background-color: $e5-banner-bg-color;
+
+	#e5-logo {
+		width: $e5-logo-width;
+		height: $e5-logo-height;
+		background-image: url($base-path + 'images/logo.png');
+		@include background-image(cover);
+	}
+
+	#e5-content {
+		.h2-wrapper {
+			height: $e5-banner-h2-font-size;
+
+			h2, span {
+				line-height: $e5-banner-h2-font-size - 5px;
+				color: $e5-banner-color;
+				float: left;
+			}
+
+			h2 {
+				font-size: $e5-banner-h2-font-size;
+				font-weight: 500;
+				text-transform: uppercase;
+			}
+
+			span {
+				font-size: $e5-banner-h2-font-size - 10px;
+				padding-top: 2px;
+			}
+		}
+
+		h3 {
+			color: $e5-banner-hightlight;
+		}
+	}
+
+	form {
+		background-color: $e5-banner-bg-color;
+
+		input[type="text"] {
+			width: 100%;
+			height: $banner-input-height;
+			padding: 0 $banner-input-padding;
+			@include border-radius(5px);
+			background-color: $e5-banner-bg-color;
+		}
+
+		button {
+
+		}
+	}
+
+	#e5-mountain {
+
+	}
+}

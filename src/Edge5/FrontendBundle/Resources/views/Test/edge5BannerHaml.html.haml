@@ -1,0 +1,17 @@
+- extends "Edge5FrontendBundle::layout.html.twig"
+
+- block content
+
+    #e5-container
+        #e5-logo
+        #e5-content
+            .h2-wrapper
+                %h2 Do
+                %span.fa.fa-female
+                %span.fa.fa-male
+            %h3 like what you see?
+        %form
+            %input{:type=>"text", :required => true, :value => "Name..."}
+            %button.fa.fa-heart
+            %button.fa.fa-times
+        #e5-mountain

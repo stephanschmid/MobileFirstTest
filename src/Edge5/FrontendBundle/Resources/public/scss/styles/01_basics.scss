@@ -109,6 +109,10 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+body, html {
+	height: 100%;
+}
+
 a {
 	color: inherit;
 	text-decoration: none;
