@@ -69,7 +69,6 @@
 		h3 {
 			font-size: $e5-banner-h2-font-size / 2;
 			font-weight: 400;
-			//text-align: center;
 			color: $e5-banner-color;
 			padding-left: 3px;
 			margin: $e5-h3-margin 0 $e5-h3-margin * 2 0;
@@ -186,7 +185,6 @@
 @media only screen and (min-width: 480px) {
 
 	#e5-container {
-
 		#e5-logo {
 			height: $e5-logo-height * 1.5;
 			@include background-image-size($e5-logo-width / 1.5);
@@ -246,7 +244,6 @@
 					font-size: $e5-banner-h2-font-size * 2;
 					font-weight: 500;
 					color: $e5-banner-color;
-					//text-transform: uppercase;
 				}
 
 				span {
@@ -277,6 +274,7 @@
 // Landscape
 
 @media only screen and (max-width: 600px) and (orientation: landscape) {
+
 	#e5-container {
 		#e5-logo {
 			display: none;
@@ -285,10 +283,6 @@
 		#e5-content {
 			border-top: none;
 			padding-top: 0;
-
-			.h2-wrapper {
-				//width: 320px;
-			}
 
 			h3 {
 				position: absolute;
