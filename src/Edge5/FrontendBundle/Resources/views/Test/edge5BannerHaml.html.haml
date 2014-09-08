@@ -7,11 +7,17 @@
         #e5-content
             .h2-wrapper
                 %h2 Do
-                %span.fa.fa-female
+                %span.fa.fa-female.mother
                 %span.fa.fa-male
+                %span.fa.fa-female.child
             %h3 like what you see?
         %form
-            %input{:type=>"text", :required => true, :value => "Name..."}
-            %button.fa.fa-heart
-            %button.fa.fa-times
-        #e5-mountain
+            %input.first{:type=>"text", :required => true, :value => "First-name..."}
+            %input.last{:type=>"text", :required => true, :value => "Last-name..."}
+            %input{:type=>"mail", :required => true, :value => "Email..."}
+            .button-wrapper.button-wrapper-1
+                %button.fa.fa-heart{:type=>"submit"}
+            .button-wrapper.button-wrapper-2
+                %button.fa.fa-times{:type=>"reset"}
+        .e5-mountain-1
+        .e5-mountain-2

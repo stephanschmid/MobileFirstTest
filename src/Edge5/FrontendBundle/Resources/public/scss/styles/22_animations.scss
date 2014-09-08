@@ -63,3 +63,109 @@
 	70%  {bottom: -72px; left: -34px;}
 	100% {bottom: -69px; left: -30px;}
 }
+
+/* ================================================================== */
+
+@include keyframes(logo-animation) {
+	0%       {top: - $e5-logo-height;}
+	100%     {top: 0;}
+}
+
+@include keyframes(mountain-1-animation) {
+	0%       {left: 0px;}
+	99.9999%   {left: -90%;}
+	100%     {left: 0px;}
+}
+
+@include keyframes(mountain-2-animation) {
+	0%       {left: 90%;}
+	99.9999%   {left: 0px;}
+	100%     {left: 90%;}
+}
+
+@include keyframes(button-1-animation) {
+	0%       {left: 100%;}
+	80%       {left: 100%;}
+	100%     {left: 0%;}
+}
+
+@include keyframes(button-2-animation) {
+	0%       {left: -100%;}
+	80%       {left: -100%;}
+	100%     {left: 0%;}
+}
+
+@include keyframes(button-1-rotation) {
+	from {
+		@include transform(rotate(0deg));
+	} to {
+		  @include transform(rotate(-360deg));
+	  }
+}
+
+@include keyframes(button-2-rotation) {
+	from {
+		@include transform(rotate(0deg));
+	} to {
+		  @include transform(rotate(360deg));
+	  }
+}
+
+@include keyframes(person-animation) {
+	0%       {left: 100%;}
+	50%      {left: 100%;}
+	100%     {left: 0%;}
+}
+
+@include keyframes(child-animation) {
+	0%       {left: 100%;}
+	50%      {left: 100%;}
+	60%      {margin-top: 10px;}
+	65%      {margin-top: -10px;}
+	70%      {margin-top: 10px;}
+	75%      {margin-top: -10px;}
+	80%      {margin-top: 10px;}
+	85%      {margin-top: -10px;}
+	90%      {margin-top: 10px;}
+	95%      {margin-top: -10px;}
+	100%     {left: 0%;}
+}
+
+@include keyframes(input-from-left-animation) {
+	0%       {left: -120%;}
+	80%      {left: -120%;}
+	100%     {left: 0%;}
+}
+
+@include keyframes(input-from-right-animation) {
+	0%       {left: 120%;}
+	80%      {left: 120%;}
+	100%     {left: 0%;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

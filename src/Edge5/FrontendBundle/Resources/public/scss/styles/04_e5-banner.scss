@@ -1,60 +1,315 @@
 #e5-container {
 	height: 100%;
 	min-height: 100%;
-	margin: $e5-banner-wrapper-margin;
+	padding: $e5-banner-wrapper-margin;
 	background-color: $e5-banner-bg-color;
 
 	#e5-logo {
-		width: $e5-logo-width;
+		width: 100%;
 		height: $e5-logo-height;
-		background-image: url($base-path + 'images/logo.png');
-		@include background-image(cover);
+		background: url($base-path + 'images/logo.png') no-repeat center;
+		@include background-image-size($e5-logo-width / 2);
+		margin-bottom: $e5-container-margin;
+		position: relative;
+		@include animation(logo-animation, 1000ms, 1, linear);
 	}
 
 	#e5-content {
+		border-top: 1px solid $e5-banner-hightlight;
+		padding-top: $e5-container-margin;
+
 		.h2-wrapper {
 			height: $e5-banner-h2-font-size;
 
 			h2, span {
 				line-height: $e5-banner-h2-font-size - 5px;
-				color: $e5-banner-color;
 				float: left;
+				@include transition(all, 300ms, linear);
 			}
 
 			h2 {
 				font-size: $e5-banner-h2-font-size;
 				font-weight: 500;
-				text-transform: uppercase;
+				color: $e5-banner-color;
+				@include animation(h2-animation, 2s, 1, ease-in-out);
 			}
 
 			span {
-				font-size: $e5-banner-h2-font-size - 10px;
+				font-size: $e5-banner-h2-span-font-size;
+				color: $e5-banner-hightlight;
 				padding-top: 2px;
+				padding-left: 20px;
+				position: relative;
+
+				&.fa-female.mother {
+					padding-left: 20px;
+				}
+
+				&.fa-male {
+					padding-left: 0;
+					margin-left: -4px;
+				}
+
+				&.fa-female.mother,
+				&.fa-male {
+					@include animation(person-animation, 3000ms, 1, linear);
+				}
+
+				&.fa-female.child {
+					font-size: $e5-banner-h2-span-font-size  / 1.5;
+					line-height: $e5-banner-h2-span-font-size  / 1.5;
+					padding-top: 18px;
+					padding-left: 0px;
+					margin-left: -5px;
+					@include animation(child-animation, 4500ms, 1, linear);
+				}
 			}
 		}
 
 		h3 {
-			color: $e5-banner-hightlight;
+			font-size: $e5-banner-h2-font-size / 2;
+			font-weight: 400;
+			//text-align: center;
+			color: $e5-banner-color;
+			padding-left: 3px;
+			margin: $e5-h3-margin 0 $e5-h3-margin * 2 0;
+			@include transition(all, 300ms, linear);
+			@include animation(h3-animation, 5500ms, 1, ease-in-out);
 		}
 	}
 
 	form {
 		background-color: $e5-banner-bg-color;
 
-		input[type="text"] {
+		input[type="text"],
+		input[type="mail"] {
 			width: 100%;
 			height: $banner-input-height;
 			padding: 0 $banner-input-padding;
 			@include border-radius(5px);
 			background-color: $e5-banner-bg-color;
+			border: 3px solid $e5-banner-hightlight;
+			color: $e5-banner-hightlight;
+			margin-top: $e5-banner-input-margin;
+			position: relative;
+			@include transition(all, 300ms, linear);
+
+			&:focus {
+				color: $e5-banner-input-color-focus;
+				border-color: $e5-banner-input-border-color-focus;
+				background-color: $e5-banner-input-bg-color-focus;
+			}
 		}
 
-		button {
+		input[type="mail"] {
+			margin-bottom: $e5-banner-input-email-margin;
+		}
 
+		.first,
+		input[type="mail"] {
+			@include animation(input-from-left-animation, 6000ms, 1, linear);
+		}
+
+		.last {
+			@include animation(input-from-right-animation, 6000ms, 1, linear);
+		}
+
+		.button-wrapper {
+			width: 50%;
+			float: left;
+			position: relative;
+
+			&.button-wrapper-1 {
+				@include animation(button-1-animation, 8000ms, 1, linear);
+			}
+
+			&.button-wrapper-2 {
+				@include animation(button-2-animation, 8000ms, 1, linear);
+			}
+
+			button {
+				font-size: $e5-banner-button-font-size;
+				line-height: $e5-banner-button-font-size;
+				width: $e5-banner-button-size;
+				height: $e5-banner-button-size;
+				border: 3px solid $e5-banner-hightlight;
+				background-color: $e5-banner-bg-color;
+				color: $e5-banner-hightlight;
+				background-color: $e5-banner-bg-color;
+				@include border-radius(50%);
+				margin: 0 auto;
+				display: block;
+				@include transition(all, 300ms, linear);
+				position: relative;
+
+				&.fa.fa-heart {
+					padding-top: 5px;
+					@include animation(button-1-rotation, 2000ms, 4, linear);
+				}
+
+				&.fa.fa-times {
+					@include animation(button-2-rotation, 2000ms, 4, linear);
+				}
+
+				&:hover, &:active {
+					background-color: $e5-banner-hightlight;
+					color: $e5-banner-bg-color;
+				}
+			}
 		}
 	}
 
-	#e5-mountain {
+	.e5-mountain-1, .e5-mountain-2 {
+		width: 100%;
+		height: 50px;
+		position: absolute;
+		bottom: 0;
+	}
+
+	.e5-mountain-1 {
+		left: 0;
+		background: url($base-path + 'images/mountain-1.png') no-repeat center 15% scroll;
+		@include background-image-size(cover);
+		@include animation(mountain-1-animation, 15s, infinite, linear);
+	}
+
+	.e5-mountain-2 {
+		left: 100%;
+		background: url($base-path + 'images/mountain-2.png') no-repeat center 15% scroll;
+		@include background-image-size(cover);
+		@include animation(mountain-2-animation, 15s, infinite, linear);
+	}
+}
+
+
+
+@media only screen and (min-width: 480px) {
+
+	#e5-container {
+
+		#e5-logo {
+			height: $e5-logo-height * 1.5;
+			@include background-image-size($e5-logo-width / 1.5);
+		}
+		.e5-mountain-1, .e5-mountain-2 {
+			height: 80px;
+		}
+		form {
+			input[type="text"] {
+				width: 49.8%;
+				margin-right: 0;
+			}
+			input[type="mail"] {
+				width: 100%;
+			}
+		}
+	}
+
+}
+
+@media only screen and (min-width: 768px) {
+
+	#e5-container {
+		.e5-mountain-1, .e5-mountain-2 {
+			height: 100px;
+		}
+		form {
+			.button-wrapper {
+				button {
+					font-size: $e5-banner-button-font-size  * 2;
+					width: $e5-banner-button-size * 2;
+					height: $e5-banner-button-size * 2;
+				}
+			}
+		}
+	}
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+	#e5-container {
+		.e5-mountain-1, .e5-mountain-2 {
+			height: 120px;
+		}
+
+		#e5-content {
+			.h2-wrapper {
+				height: $e5-banner-h2-font-size * 2;
+
+				h2, span {
+					line-height: $e5-banner-h2-font-size * 2 - 5px;
+					float: left;
+				}
+
+				h2 {
+					font-size: $e5-banner-h2-font-size * 2;
+					font-weight: 500;
+					color: $e5-banner-color;
+					//text-transform: uppercase;
+				}
+
+				span {
+					font-size: $e5-banner-h2-span-font-size * 2;
+
+					&.fa-male {
+						margin-left: -10px;
+					}
+					&.fa-female.child {
+						font-size: $e5-banner-h2-span-font-size * 2  / 1.5;
+						line-height: $e5-banner-h2-span-font-size * 2  / 1.5;
+						padding-top: 38px;
+						margin-left: -10px;
+					}
+				}
+			}
+
+			h3 {
+				font-size: $e5-banner-h2-font-size;
+				margin: $e5-h3-margin * 2 0 $e5-h3-margin * 4 0;
+			}
+		}
+	}
+
+}
+
+
+// Landscape
+
+@media only screen and (max-width: 600px) and (orientation: landscape) {
+	#e5-container {
+		#e5-logo {
+			display: none;
+		}
+
+		#e5-content {
+			border-top: none;
+			padding-top: 0;
+
+			.h2-wrapper {
+				//width: 320px;
+			}
+
+			h3 {
+				position: absolute;
+				top: 28px;
+				left: 200px;
+			}
+		}
+
+		form {
+			input[type="text"] {
+				width: 49.7%;
+			}
+
+			input[type="mail"] {
+				margin-bottom: $e5-banner-input-email-margin / 2;
+			}
+		}
+
+		.e5-mountain-1, .e5-mountain-2 {
+			display: none;
+		}
 
 	}
 }

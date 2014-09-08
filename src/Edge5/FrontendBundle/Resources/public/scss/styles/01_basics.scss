@@ -111,6 +111,12 @@ textarea {
 
 body, html {
 	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	width: 100%;
+	position: relative;
 }
 
 a {
