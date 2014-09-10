@@ -1,0 +1,241 @@
+
+.plx-wrapper {
+	width: 100%;
+	padding-top: $plx-container-margin;
+	background: url($base-path + 'images-parallax/stardust.png');
+	background-attachment: fixed;
+
+	.plx-headline {
+		text-align: center;
+		h1 {
+			font-size: $plx-h1-font-size;
+			line-height: $plx-h1-font-size;
+			padding-bottom: $plx-container-margin;
+			color: $plx-header-color;
+		}
+	}
+
+	.plx-spacer {
+		width: 1px;
+		height: $plx-spacer-height;
+		margin: 0 auto;
+		//border: 1px dashed orange;
+	}
+
+	.animatable {
+		&.plx-container-1,
+		&.plx-container-2,
+		&.plx-container-3,
+		&.plx-container-4 {
+			width: 100%;
+			max-width: $plx-container-width;
+			height: $plx-container-height;
+			margin: 0 auto;
+			position: relative;
+		}
+
+		&.plx-container-1 {
+			//border: 1px solid white;
+
+			.monitor,
+			.mouse,
+			.keyboard {
+				position: absolute;
+			}
+
+			.monitor {
+				width: $plx-monitor-size;
+				height: $plx-monitor-size;
+				margin: 0 auto;
+				top: 10%;
+				left: 0;
+				right: 0;
+				background-image: url($base-path + 'images-parallax/svg/iconmonstr-computer-icon.svg');
+				@include background-image-size(cover);
+			}
+			.mouse {
+				width: $plx-mouse-size;
+				height: $plx-mouse-size;
+				left: 60%;
+				top: 45%;
+				background-image: url($base-path + 'images-parallax/svg/iconmonstr-mouse-6-icon.svg');
+				@include background-image-size(cover);
+			}
+			.keyboard {
+				width: $plx-keyboard-size;
+				height: $plx-keyboard-size;
+				margin: 0 auto;
+				bottom: 10%;
+				left: 0;
+				right: 0;
+				background-image: url($base-path + 'images-parallax/svg/iconmonstr-keyboard-11-icon.svg');
+				@include background-image-size(cover);
+			}
+		}
+
+		&.plx-container-2 {
+			//border: 1px solid green;
+
+			.umbrella,
+			.drop {
+				position: absolute;
+			}
+
+			.umbrella {
+				width: $plx-umbrella-size;
+				height: $plx-umbrella-size;
+				margin: 0 auto;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-image: url($base-path + 'images-parallax/svg/iconmonstr-umbrella-icon.svg');
+				@include background-image-size(cover);
+			}
+			.drop {
+				width: $plx-drop-size;
+				height: $plx-drop-size;
+				background-image: url($base-path + 'images-parallax/svg/iconmonstr-drop-2-icon.svg');
+				@include background-image-size(cover);
+
+				&.drop-1 {
+					left: 5%;
+					top: 5%;
+				}
+				&.drop-2 {
+					left: 20%;
+					top: 20%;
+				}
+				&.drop-3 {
+					left: 35%;
+					top: 5%;
+				}
+				&.drop-4 {
+					left: 50%;
+					top: 20%;
+				}
+				&.drop-5 {
+					left: 65%;
+					top: 5%;
+				}
+				&.drop-6 {
+					left: 80%;
+					top: 20%;
+				}
+			}
+		}
+
+		&.plx-container-3 {
+			//border: 1px solid orange;
+
+			.santa,
+			.rudolph,
+			.rudolph-2,
+			.cookie,
+			.sad-cookie,
+			.tree {
+				width: $plx-christmas-element-size;
+				height: $plx-christmas-element-size;
+				position: absolute;
+				@include background-image-size(cover);
+			}
+
+			.santa {
+				top: 35%;
+				left: 0;
+				right: 0;
+				background-image: url($base-path + 'images-parallax/svg/iconmonstr-christmas-santa-claus-icon.svg');
+			}
+			.rudolph {
+				left: 10%;
+				bottom: 10%;
+				background-image: url($base-path + 'images-parallax/svg/iconmonstr-christmas-reindeer-icon.svg');
+			}
+			.rudolph-2 {
+				right: 10%;
+				top: 10%;
+				background-image: url($base-path + 'images-parallax/svg/iconmonstr-christmas-reindeer-icon.svg');
+			}
+ 			.cookie {
+				left: 10%;
+				top: 10%;
+				background-image: url($base-path + 'images-parallax/svg/iconmonstr-christmas-gingerbread-icon.svg');
+			}
+			.sad-cookie {
+				right: 10%;
+				bottom: 10%;
+				background-image: url($base-path + 'images-parallax/svg/iconmonstr-christmas-gingerbread-2-icon.svg');
+			}
+			.tree {
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-image: url($base-path + 'images-parallax/svg/iconmonstr-christmas-tree-7-icon.svg');
+			}
+
+			.santa,
+			.tree {
+				margin: 0 auto;
+			}
+		}
+
+		&.plx-container-4 {
+			//border: 1px solid purple;
+
+			.rocket,
+			.star {
+				position: absolute;
+				@include background-image-size(cover);
+			}
+
+			.rocket {
+				width: $plx-rocket-size;
+				height: $plx-rocket-size;
+				background-image: url($base-path + 'images-parallax/svg/iconmonstr-rocket-icon.svg');
+
+				&.rocket-1 {
+					margin: 0 auto;
+					bottom: 60%;
+					left: 0;
+					right: 0;
+				}
+				&.rocket-2 {
+					bottom: 0;
+					left: 0;
+				}
+				&.rocket-3 {
+					bottom: 0;
+					right: 0;
+				}
+			}
+
+			.star {
+				width: $plx-star-size;
+				height: $plx-star-size;
+				margin: 0 auto;
+				top: 40%;
+				left: 0;
+				right: 0;
+				background-image: url($base-path + 'images-parallax/svg/iconmonstr-star-5-icon.svg');
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,92 @@
+
+body {
+	&.anim-1 {
+		.plx-wrapper {
+			.animatable {
+				&.plx-container-1 {
+					.monitor {
+						@include animation(monitor-animation, 1000ms, 1, linear);
+					}
+					.mouse {
+						@include animation(mouse-animation, 2000ms, infinite, linear);
+					}
+					.keyboard {
+						@include animation(keyboard-animation, 3000ms, infinite, linear);
+					}
+				}
+			}
+		}
+	}
+
+	&.anim-2 {
+		.plx-wrapper {
+			.animatable {
+				&.plx-container-2 {
+					.umbrella {
+						@include animation(pulse-animation, 1500ms, infinite, linear);
+					}
+					.drop {
+						@include background-image-size(cover);
+
+						&.drop-1 {
+							@include animation(drop-animation, 2500ms, infinite, linear);
+						}
+						&.drop-2 {
+							@include animation(drop-animation, 2600ms, infinite, linear);
+						}
+						&.drop-3 {
+							@include animation(drop-animation, 2200ms, infinite, linear);
+						}
+						&.drop-4 {
+							@include animation(drop-animation, 2400ms, infinite, linear);
+						}
+						&.drop-5 {
+							@include animation(drop-animation, 2300ms, infinite, linear);
+						}
+						&.drop-6 {
+							@include animation(drop-animation, 2100ms, infinite, linear);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.anim-3 {
+		.plx-wrapper {
+			.animatable {
+				&.plx-container-3 {
+					.santa,
+					.rudolph,
+					.rudolph-2,
+					.cookie,
+					.sad-cookie,
+					.tree {
+						@include animation(shake-animation, 800ms, infinite, linear);
+					}
+				}
+			}
+		}
+	}
+
+	&.anim-4 {
+		.plx-wrapper {
+			.animatable {
+				&.plx-container-4 {
+					.rocket {
+						&.rocket-1 {
+							@include animation(rocket-top-animation, 2000ms, 1, linear);
+						}
+						&.rocket-2,
+						&.rocket-3 {
+							@include animation(rocket-animation, 2000ms, 1, linear);
+						}
+					}
+					.star {
+						@include animation(star-rotation, 2000ms, infinite, linear);
+					}
+				}
+			}
+		}
+	}
+}

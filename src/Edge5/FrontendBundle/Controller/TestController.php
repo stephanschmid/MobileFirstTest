@@ -98,5 +98,14 @@ class TestController extends Controller
     {
         return $this->responsiveAnimatedBannerAction();
     }
+
+    /**
+     * @Route("/parallaxCss3Animations", name="_parallaxCss3Animations")
+     * @Template(engine="haml")
+     */
+    public function parallaxCss3AnimationsAction()
+    {
+        return $this->responsiveAnimatedBannerAction();
+    }
 	
 }
