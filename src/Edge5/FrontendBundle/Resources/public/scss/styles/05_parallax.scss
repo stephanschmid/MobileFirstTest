@@ -14,12 +14,10 @@
 			color: $plx-header-color;
 		}
 	}
-
 	.plx-spacer {
 		width: 1px;
 		height: $plx-spacer-height;
 		margin: 0 auto;
-		//border: 1px dashed orange;
 	}
 
 	.animatable {
@@ -32,11 +30,9 @@
 			height: $plx-container-height;
 			margin: 0 auto;
 			position: relative;
+			//border: 1px solid black;
 		}
-
 		&.plx-container-1 {
-			//border: 1px solid white;
-
 			.monitor,
 			.mouse,
 			.keyboard {
@@ -74,8 +70,6 @@
 		}
 
 		&.plx-container-2 {
-			//border: 1px solid green;
-
 			.umbrella,
 			.drop {
 				position: absolute;
@@ -125,8 +119,6 @@
 		}
 
 		&.plx-container-3 {
-			//border: 1px solid orange;
-
 			.santa,
 			.rudolph,
 			.rudolph-2,
@@ -171,7 +163,6 @@
 				bottom: 0;
 				background-image: url($base-path + 'images-parallax/svg/iconmonstr-christmas-tree-7-icon.svg');
 			}
-
 			.santa,
 			.tree {
 				margin: 0 auto;
@@ -179,8 +170,6 @@
 		}
 
 		&.plx-container-4 {
-			//border: 1px solid purple;
-
 			.rocket,
 			.star {
 				position: absolute;

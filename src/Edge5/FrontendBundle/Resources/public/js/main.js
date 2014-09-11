@@ -12,14 +12,13 @@ requirejs.config({
     }
 });
 
-require(['jquery', 'dummies/dummy'], function($, dummy){
+require(['jquery', 'src/animatable'], function($, animatable){
 
 
     $(function() {
 
-		var val = dummy.sayHello();
-
-		//alert(val);
+		// Run animatable
+		animatable.init(null,null,null, 200);
 
     });
 
