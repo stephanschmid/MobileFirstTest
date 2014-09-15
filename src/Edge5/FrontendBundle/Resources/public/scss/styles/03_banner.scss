@@ -71,6 +71,7 @@ section.wrapper {
 						background-image: linear-gradient(bottom, rgb(199,178,155) 0%, rgb(199,178,155) 100%);
 						background-image: -o-linear-gradient(bottom, rgb(199,178,155) 0%, rgb(199,178,155) 100%);
 						background-image: -moz-linear-gradient(bottom, rgb(199,178,155) 0%, rgb(199,178,155) 100%);
+						@include transition(background-color, 300ms, linear);
 						background-image: -webkit-linear-gradient(bottom, rgb(199,178,155) 0%, rgb(199,178,155) 100%);
 						background-image: -ms-linear-gradient(bottom, rgb(199,178,155) 0%, rgb(199,178,155) 100%);
 					}
@@ -81,7 +82,6 @@ section.wrapper {
 					border: 1px solid $banner-input-submit-border-color;
 					background-color: $banner-input-submit-bg-color;
 					@include transition(color, 300ms, linear);
-					@include transition(background-color, 300ms, linear);
 
 					&:hover {
 						color: $banner-input-submit-bg-color;

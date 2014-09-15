@@ -30,12 +30,12 @@ define(["jquery"], function($) {
 			// height of the window
 			this.windowHeight = $(window).height();
 
-			// start interval function
+			// run interval function
 			this.startInterval();
 
 		},
 		startInterval: function() {
-
+			// inherit this
 			var that = this;
 
 			setInterval(function() {
