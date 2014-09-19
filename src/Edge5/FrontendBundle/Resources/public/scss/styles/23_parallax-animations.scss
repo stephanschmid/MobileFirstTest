@@ -33,8 +33,6 @@
 	100% { @include transform(translate(1px, -2px) rotate(0deg)); }
 }
 
-
-
 @include keyframes(pulse-animation) {
 	0% {
 		@include transform(scale(0.9));

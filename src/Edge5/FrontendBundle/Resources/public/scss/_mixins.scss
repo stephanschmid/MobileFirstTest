@@ -90,6 +90,15 @@
 	transform: $transforms;
 }
 
+// Delay
+@mixin delay($delay) {
+	-moz-animation-delay: $delay;
+	-o-animation-delay: $delay;
+	-ms-animation-delay: $delay;
+	-webkit-animation-delay: $delay;
+	animation-delay: $delay;
+}
+
 // Opacity
 @mixin opacity($value){
 	$IEValue: $value*100;
@@ -98,6 +107,28 @@
 	filter: alpha(opacity=$IEValue);
 }
 
+// Center block-element
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Text Overflow
+@mixin text-truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+// Position Absolute
+@mixin abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+	position: absolute;
+}
 
 
 
